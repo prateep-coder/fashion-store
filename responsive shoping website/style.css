@@ -71,6 +71,12 @@ header {
   color: var(--light-black);
   text-transform: uppercase;
   font-weight: 500;
+  padding: 8px;
+  border-radius: .3rem;
+}
+
+span{
+  color: #4e07f5;
 }
 
 .icon {
@@ -82,18 +88,25 @@ header {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
+
 }
+
 
 .navbar {
   height: 12vh;
   justify-content: space-between;
 }
+
+
 .navlist {
   gap: 2.5rem;
 }
 
+
+
 .nav-icons {
   gap: 0.8rem;
+  
 }
 
 .hamburger {
@@ -102,12 +115,15 @@ header {
   display: none;
 }
 
-.link-active,
-span,
+
+
 .link:hover,
 .icon:hover {
-  color: var(--primary-clr);
+  color: var(--black-clr);
+  background: #e9fa03;
 }
+
+
 
 /* section style */
 .hero {
@@ -131,8 +147,8 @@ h3 {
   line-height: 3.7rem;
   color: #000;
   text-transform: uppercase;
- 
 }
+
 
 h1 {
   font-size: 4rem;
@@ -140,6 +156,15 @@ h1 {
   line-height: 4rem;
   color: #ff0363;
   
+}
+
+h2{
+  font-size: 2rem;
+  line-height: 4rem;
+  color: var(--light-black);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 h4 {
@@ -185,21 +210,19 @@ button:hover {
 .category {
   position: relative;
   overflow: hidden;
-  height: 350px; /* 👈 Set image box height */
+  height: 350px; 
   transition: transform 0.3s ease;
   transform-origin: center center;
+  border-radius: .5rem;
 }
-
 
 
 .category img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top; /* 👈 Image bottom se align hogi */
+  object-position: top; 
 }
-
-
 
 .category button {
   position: absolute;
@@ -218,13 +241,6 @@ button:hover {
 
 
 
-
-.category {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  transform-origin: center center;
-}
 
 
 .category button{
@@ -245,7 +261,7 @@ button:hover {
 
 .category:hover {
   transform: scale(1.05);
-  z-index: 5; /* To make sure the image hovers above others */
+  z-index: 5; 
 }
 
 
@@ -263,3 +279,11 @@ button:hover {
 .category:hover::before{
   width: 100%;
 }
+
+.link-prd{
+  background-color: var(--primary-clr);
+  width: 60px;
+  height: 2.5px;
+  margin: auto;
+}
+
