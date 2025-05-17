@@ -174,3 +174,92 @@ button:hover {
   text-shadow: 0 2px 5px rgba(255, 218, 10, 0.5);
 }
 
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+
+.category {
+  position: relative;
+  overflow: hidden;
+  height: 350px; /* 👈 Set image box height */
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+
+
+.category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* 👈 Image bottom se align hogi */
+}
+
+
+
+.category button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  background: var(--white-clr);
+  color: var(--black-clr);
+  z-index: 3;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.category {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+
+.category button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  font-weight: 500;
+  background: var(--white-clr);
+  color: var(--black-clr);
+  z-index: 3;
+}
+
+.category button:hover{
+  background: var(--primary-clr);
+  color: var(--white-clr);
+}
+
+.category:hover {
+  transform: scale(1.05);
+  z-index: 5; /* To make sure the image hovers above others */
+}
+
+
+.category::before{
+  content: '';
+  position: absolute;
+  background: var(--white-clr);
+  width: 0;
+  height: 100%;
+  opacity: .2;
+  z-index: 2;
+  transition: all .3s ease-in-out;
+}
+
+.category:hover::before{
+  width: 100%;
+}
